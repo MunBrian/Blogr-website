@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Frontend Mentor | [Blogr]</title>
+</head>
+<body>
+  <nav class="w-screen bg-primary-lightRed rounded-bl-[70px]">
+    <div class="container mx-auto px-4">
+      <!--Navbar-->
+        <navbar class="flex justify-between items-center py-10">
+          <div class="flex space-x-14">
+            <!--Logo-->
+            <div>
+              <img src="images/logo.svg" alt="logo">
+            </div>
+            <!--Links-->
+            <div class="hidden md:flex items-center">
+              <ul class="flex space-x-6 text-white text-sm">
+                <li>
+                  <a href="#" class="flex items-center space-x-2"><span class="border-b-2 border-transparent">Product</span><img class="h-2" src="images/icon-arrow-light.svg" alt="arrow-down"></a>
+                </li>
+                <li>
+                  <a href="#" class="flex items-center space-x-2"><span class="border-b-2 border-transparent">Company</span><img class="h-2" src="images/icon-arrow-light.svg" alt="arrow-down"></a>
+                </li>
+                <li>
+                  <a href="#" id="link-connect" class="flex items-center space-x-2"><span class="border-b-2 border-transparent">Connect</span><img class="h-2" id="link-img" src="images/icon-arrow-light.svg" alt="arrow-down"></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!--Navbar button-->
+          <div class="hidden md:flex space-x-5 items-center text-white text-sm">
+            <a href="#">Login</a>
+            <a href="#" class="border-none rounded-2xl bg-white text-center font-medium text-primary-lightRed py-2 px-7 hover:bg-primary-veryLightRed hover:text-neutral-white">Sign Up</a>
+          </div>
+    
+          <!-- Hamburger Icon -->
+          <button id="open-menu-btn" class="block hamburger md:hidden focus:outline-none">
+            <span class="hamburger-top"></span>
+            <span class="hamburger-middle"></span>
+            <span class="hamburger-bottom"></span>
+          </button>
+        </navbar>
+    
+        <!--Hero section-->
+      <div class="mt-14 text-center pb-28">
+        <h1 class="text-white text-5xl font-semibold">A modern publishing platform</h1>
+        <h4 class="mt-5 text-white text-md font-light text-center">Grow your audience and build your online brand</h4>
+        <div class="mt-10 text-center justify-center space-x-3">
+          <a href="#" class="text-sm rounded-2xl bg-white text-center font-medium text-primary-lightRed py-[10px] px-3 hover:bg-primary-veryLightRed hover:text-neutral-white hover:border-none">Start for Free</a>
+          <a href="#" class="border-2 border-white text-sm text-white rounded-2xl text-center font-medium bg-primary-lightRed py-2 px-3 hover:bg-neutral-white hover:text-primary-lightRed ">Learn More</a>
+        </div>
+      </div>
+  
+      <!--connect dropdown-->
+      <div id="connect-drop" class="hidden absolute bg-white shadow-md shadow-primary-veryDarkBlue p-4 rounded-md w-30">
+        <ul class="flex flex-col space-y-1 justify-center text-neutral-veryDarkGrayishBlue">
+          <li><a href="#" class="text-sm hover:text-neutral-veryDarkBlackBlue font-medium">Contact</a></li>
+          <li><a href="#" class="text-sm hover:text-neutral-veryDarkBlackBlue font-medium">Newsletter</a></li>
+          <li><a href="#" class="text-sm hover:text-neutral-veryDarkBlackBlue font-medium">LinkedIn</a></li>
+        </ul>
+      </div>
+  
+      <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden absolute w-auto container mx-auto flex flex-col py-6 bg-neutral-white shadow-sm shadow-neutral-veryDarkGrayishBlue rounded-sm sm:w-auto sm:self-center left-6 right-6">
+          <div class="px-10 space-y-4">
+            <ul class="flex flex-col space-y-6 items-center font-medium text-primary-veryDarkBlue">
+              <li>
+                <a href="#" class="flex items-center space-x-2"><span class="border-b-2 border-transparent">Product</span><img
+                    class="h-2" src="images/icon-arrow-dark.svg" alt="arrow-down"></a>
+              </li>
+              <li>
+                <a href="#" class="flex items-center space-x-2"><span class="border-b-2 border-transparent">Company</span><img
+                    class="h-2" src="images/icon-arrow-dark.svg" alt="arrow-down"></a>
+              </li>
+              <li class="flex flex-col space-y-2">
+                <a href="#" class="flex items-center space-x-2">
+                  <span class="border-b-2 border-transparent">Connect</span>
+                  <img class="h-2 rotate-180" src="images/icon-arrow-dark.svg" alt="arrow-down">
+                </a>
+              </li>
+            </ul>
+            <div id="connectCard" class="bg-gray-200 p-4 rounded-md">
+              <ul class="flex flex-col space-y-2 items-center font-medium text-neutral-veryDarkGrayishBlue">
+                <li><a href="#" class="hover:text-neutral-veryDarkBlackBlue">Contact</a></li>
+                <li><a href="#" class="hover:text-neutral-veryDarkBlackBlue">Newsletter</a></li>
+                <li><a href="#" class="hover:text-neutral-veryDarkBlackBlue">LinkedIn</a></li>
+              </ul>
+            </div>
+            <div id="line" class="bg-neutral-grayishBlue w-full"></div>
+            <div class="flex flex-col space-y-3 items-center text-md font-medium">
+              <a href="#" class="text-primary-veryDarkBlue">Login</a>
+              <a href="#"
+                class="border-none rounded-3xl bg-primary-lightRed text-center text-neutral-white py-2 px-7 hover:bg-primary-veryLightRed hover:text-neutral-white">Sign
+                Up</a>
+            </div>
+          </div>
+        </div>
+    </div>
+  </nav>
+
+  <section id="section-1" class="section-1 h-fit  md:h-screen overflow-hidden">
+    <div class="container py-12 mx-auto md:py-28">
+      <h2 class="text-center text-2xl font-semibold text-primary-veryDarkBlue">Designed for the future</h2>
+      <div class="md:grid md:justify-items-stretch mt-96 md:mt-12">
+        <div class="md:justify-self-start flex flex-col items-center text-center space-y-9 md:w-1/2">
+          <div class="space-y-3">
+            <h3 class="text-lg font-semibold text-primary-veryDarkBlue">Introducing an extensible editor</h3>
+            <p class="text-sm text-neutral-veryDarkGrayishBlue">Blogr features an exceedingly intuitive interface which lets you focus on one thing: creating content.
+            The editor supports management of multiple blogs and allows easy manipulation of embeds such as images,
+            videos, and Markdown. Extensibility with plugins and themes provide easy ways to add functionality or
+            change the looks of a blog.</p>
+          </div>
+          <div class="space-y-3">
+            <h3 class="text-lg font-semibold text-primary-veryDarkBlue" >Robust content management</h3>
+            <p class="text-sm text-neutral-veryDarkGrayishBlue">
+              Flexible content management enables users to easily move through posts. Increase the usability of your blog
+              by adding customized categories, sections, format, or flow. With this functionality, you’re in full control.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="section-2" class="bg-primary-veryDarkBlue py-4 h-fit w-full relative  mt-[70px] md:mt-6 rounded-tr-[50px] rounded-bl-[50px]">
+    <div class="container flex flex-col space-y-[80px] md:space-y-[0px] text-center md:grid items-center md:justify-items-stretch mx-auto py-10">
+      <div class="md:w-1/2 absolute -top-20">
+        <img class="h-52 md:h-64 " src="images/illustration-phones.svg" alt="">
+      </div>
+      <div class="md:justify-self-end space-y-3 md:w-1/2">
+        <h3 class="text-xl text-white font-semibold text-white">State of the Art Infrastructure</h3>
+        <p class="text-sm text-neutral-grayishBlue">
+          With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity.
+          This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="section-3" class="mt-48 h-fit">
+    <div class="container mx-auto pt-[200px] md:py-28">
+      <div class="flex flex-col text-center items-center md:grid md:justify-items-stretch md:mt-12">
+        <div class="mt-[420px] md:justify-self-end space-y-9 md:w-1/2 md:mt-[20px]">
+          <div class="space-y-3">
+            <h3 class="text-lg font-semibold text-primary-veryDarkBlue">Free, open, simple</h3>
+            <p class="text-sm text-neutral-veryDarkGrayishBlue">
+              Blogr is a free and open source application backed by a large community of helpful developers. It supports
+              features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools,
+              and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
+            </p>
+          </div>
+          <div class="space-y-3">
+            <h3 class="text-lg font-semibold text-primary-veryDarkBlue">Powerful tooling</h3>
+            <p class="text-sm text-neutral-veryDarkGrayishBlue">
+              Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a breeze, but
+              capable of producing even the most complicated sites.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="mt-8 bg-neutral-veryDarkBlackBlue rounded-tr-[50px]">
+    <div class="container flex flex-col py-14 items-center md:items-start space-y-14 md:flex-row mx-auto md:py-28 md:space-y-0">
+      <!--Logo-->
+      <div class="md:mr-20">
+        <img src="images/logo.svg" alt="logo">
+      </div>
+
+      <!--Links-->
+      <div class="flex flex-col space-y-8 text-center md:flex-row md:w-3/4 md:justify-around md:space-y-0">
+          <div class="flex flex-col md:items-start space-y-4 md:space-y-8">
+            <h3 class="text-neutral-white font-light text-md">Products</h3>
+            <ul class="text-neutral-grayishBlue space-y-4 text-sm">
+              <li> <a href="#" class="hover:border-b-2 hover:border-neutral-grayishBlue">Overview</a> </li>
+              <li> <a href="#" class="hover:border-b-2 hover:border-neutral-grayishBlue">Pricing</a> </li>
+              <li> <a href="#" class="hover:border-b-2 hover:border-neutral-grayishBlue">Marketplace</a> </li>
+              <li> <a href="#" class="hover:border-b-2 hover:border-neutral-grayishBlue">Features</a> </li>
+              <li> <a href="#" class="hover:border-b-2 hover:border-neutral-grayishBlue">Integrations</a> </li>
+            </ul>
+          </div>
+          <div class="flex flex-col md:items-start space-y-4 md:pace-y-8">
+            <h3 class="text-neutral-white font-light text-md">Company</h3>
+            <ul class="text-neutral-grayishBlue text-sm space-y-4">
+              <li> <a href="#" class="hover:border-b-2 hover:border-neutral-grayishBlue">About</a> </li>
+              <li> <a href="#" class="hover:border-b-2 hover:border-neutral-grayishBlue">Team</a> </li>
+              <li> <a href="#" class="hover:border-b-2 hover:border-neutral-grayishBlue">Blog</a> </li>
+              <li> <a href="#" class="hover:border-b-2 hover:border-neutral-grayishBlue">Careers</a> </li>
+            </ul>
+          </div>
+          <div class="flex flex-col md:items-start space-y-4 md:space-y-8">
+            <h3 class="text-neutral-white font-light text-md">Connect</h3>
+            <ul  class="text-neutral-grayishBlue text-sm space-y-4">
+              <li> <a href="#" class="hover:border-b-2 hover:border-neutral-grayishBlue">Contact</a> </li>
+              <li> <a href="#" class="hover:border-b-2 hover:border-neutral-grayishBlue">Newsletter</a> </li>
+              <li> <a href="#" class="hover:border-b-2 hover:border-neutral-grayishBlue">LinkedIn</a> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+  </footer>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>
